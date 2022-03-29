@@ -20,7 +20,7 @@ class RotatorSystem {
 engine.addSystem(new RotatorSystem())
 
 /// --- Spawner function ---
-
+a
 function spawnCube(x: number, y: number, z: number) {
   // create the entity
   const cube = new Entity()
@@ -49,3 +49,12 @@ cube.addComponent(
     spawnCube(Math.random() * 8 + 1, Math.random() * 8, Math.random() * 8 + 1)
   }),
 )
+let avocado = new Entity()
+avocado.addComponent(new GLTFShape("models/avocado.gltf"))
+avocado.addComponent(
+  new Transform({
+    position: new Vector3(3, 1, 3),
+    scale: new Vector3(10, 10, 10),
+  })
+)
+engine.addEntity(avocado)
